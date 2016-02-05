@@ -16,3 +16,8 @@ h1 {
 body {
 	background: #c2ffe8;
 }
+
+p {
+	text-align: center;
+	font-size: 24px;
+}

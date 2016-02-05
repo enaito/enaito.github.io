@@ -1,0 +1,18 @@
+/* Style Sheet for A1 */
+
+h1 {
+	font-family: Helvetica;
+	text-align: center;
+}
+
+#pic img {
+	display: block;
+	width: 30%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body {
+	background: #c2ffe8;
+}

@@ -1,7 +1,7 @@
 /* Style Sheet for A1 */
 
 h1 {
-	font-family: Helvetica;
+	font-variant: small-caps;
 	text-align: center;
 }
 
@@ -15,9 +15,17 @@ h1 {
 
 body {
 	background: #c2ffe8;
+	font-family: Helvetica;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
-p {
+h2 {
+	font-weight: normal;
+	font-variant: small-caps;
 	text-align: center;
-	font-size: 24px;
+}
+
+.ital {
+	font-style: italic;
 }

@@ -18,6 +18,11 @@ h2 {
 	text-align: center;
 }
 
+h3 {
+	font-size: 20px;
+	font-weight: normal;
+}
+
 #pic img {
 	display: block;
 	width: 30%;
@@ -28,10 +33,4 @@ h2 {
 
 .ital {
 	font-style: italic;
-}
-
-.sublist {
-	margin-bottom: 12px;
-	list-style: circle;
-	padding-left: 20px;
 }

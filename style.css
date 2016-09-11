@@ -34,3 +34,33 @@ h3 {
 .ital {
 	font-style: italic;
 }
+
+#roll {
+	text-align: center;
+	width: 100px;
+	height: 50px;
+	background: green;
+}
+
+#reset {
+	text-align: center;
+	width: 100px;
+	height: 50px;
+	background: green;
+}
+
+.center {
+	text-align: center;
+}
+
+.die {
+	width: 100px;
+	height: 100px;
+	background: white;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.dieClicked {
+	background: orange;
+}

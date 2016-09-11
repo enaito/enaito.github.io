@@ -5,10 +5,55 @@
 	<meta charset="utf-8">
 	<title>Dice Games</title>
 	<link href="style.css" rel="stylesheet" />
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var nums = [0, 0, 0, 0, 0];
+			var dice = document.getElementsByClassName('die');
+			var numDice = dice.length;
+
+			function rollDice() {
+				$.each(dice, function() {
+					if(! $(this).hasClass("dieClicked")) {
+						this.innerText = Math.ceil(Math.random() * 6);
+					}
+				})
+			}
+
+			$("#roll").click(function() {
+				rollDice();
+			});
+			
+			$("#reset").click(function() {
+				$.each(dice, function() {
+					this.innerText = '';
+					$(this).removeClass('dieClicked');
+				});
+			});
+
+			$(".die").click(function() {
+				$(this).toggleClass('dieClicked');
+			});
+		});
+		
+	</script>
 </head>
 
 <body>
 	<h1>Let's Play!</h1>
+	<div class="center">
+		<button class="die"></button>
+		<button class="die"></button>
+		<button class="die"></button>
+		<button class="die"></button>
+		<button class="die"></button>
+	</div>
+	<br>
+	<div class="center">
+		<button id="roll">Roll</button>
+		<button id="reset">Reset</button>
+	</div>
+
 </body>
 
 </html>

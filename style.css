@@ -64,3 +64,23 @@ h3 {
 .dieClicked {
 	background: orange;
 }
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0px auto;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+.total {
+	background-color: #7e7e7e;
+	color: white;
+	font-weight: bold;
+}

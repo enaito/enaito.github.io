@@ -5,40 +5,8 @@
 	<meta charset="utf-8">
 	<title>Dice Games</title>
 	<link href="style.css" rel="stylesheet" />
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			var nums = [0, 0, 0, 0, 0];
-			var dice = document.getElementsByClassName('die');
-			var numDice = dice.length;
-
-			function rollDice() {
-				$.each(dice, function() {
-					if(! $(this).hasClass("dieClicked")) {
-						this.innerText = Math.ceil(Math.random() * 6);
-					}
-				})
-			}
-
-			$("#roll").click(function() {
-				rollDice();
-			});
-			
-			$("#reset").click(function() {
-				$.each(dice, function() {
-					this.innerText = '';
-					$(this).removeClass('dieClicked');
-				});
-			});
-
-			$(".die").click(function() {
-				if(this.innerText != '') {
-					$(this).toggleClass('dieClicked');
-				}
-			});
-		});
-		
-	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="dice.js"></script>
 </head>
 
 <body>
@@ -55,6 +23,89 @@
 		<button id="roll">Roll</button>
 		<button id="reset">Reset</button>
 	</div>
+	<br>
+	<table>
+		<tr>
+			<th>Dice Rolls</th>
+			<th>Player 1</th>
+			<th>Player 2</th>
+		</tr>
+		<tr>
+			<td>One's</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Two's</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Three's</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Four's</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Five's</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Six's</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="total">
+			<td>Upper Total:</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Three of a Kind</td>
+			<td>10</td>
+			<td>23</td>
+		</tr>
+		<tr>
+			<td>Four of a Kind</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Full House</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Small Straight</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Large Straight</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Yahtzee</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Chance</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="total">
+			<td>Total:</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
 
 </body>
 

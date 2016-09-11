@@ -32,7 +32,9 @@
 			});
 
 			$(".die").click(function() {
-				$(this).toggleClass('dieClicked');
+				if(this.innerText != '') {
+					$(this).toggleClass('dieClicked');
+				}
 			});
 		});
 		

@@ -49,6 +49,10 @@ h3 {
 	background: green;
 }
 
+.disable {
+	background: #eee;
+}
+
 .center {
 	text-align: center;
 }
@@ -77,10 +81,20 @@ th, td {
     border-bottom: 1px solid #ccc;
 }
 
+th {
+	text-align: center;
+}
 
+tr:not(.total):not(:first-child):hover {
+	background-color: #eee;
+}
 
 .total {
 	background-color: #7e7e7e;
 	color: white;
 	font-weight: bold;
+}
+
+.myTurn {
+	background-color: yellow;
 }

@@ -42,15 +42,15 @@ h3 {
 	background: green;
 }
 
+#roll.disable {
+	background: #eee;
+}
+
 #reset {
 	text-align: center;
 	width: 100px;
 	height: 50px;
 	background: green;
-}
-
-.disable {
-	background: #eee;
 }
 
 .center {
@@ -97,4 +97,8 @@ tr:not(.total):not(:first-child):hover {
 
 .myTurn {
 	background-color: yellow;
+}
+
+.potential {
+	color: #808080;
 }

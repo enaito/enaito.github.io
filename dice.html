@@ -7,6 +7,7 @@
 	<link href="style.css" rel="stylesheet" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="dice.js"></script>
+	<script src="scoring.js"></script>
 </head>
 
 <body>
@@ -21,7 +22,6 @@
 	<br>
 	<div class="center">
 		<button id="roll">Roll</button>
-		<button id="reset">Reset</button>
 	</div>
 	<br>
 	<table>
@@ -30,32 +30,32 @@
 			<th class=" player myTurn">Player 1</th>
 			<th class="player">Player 2</th>
 		</tr>
-		<tr>
+		<tr id='0'>
 			<td>One's</td>
 			<td></td>
 			<td></td>
 		</tr>
-		<tr>
+		<tr id='1'>
 			<td>Two's</td>
 			<td></td>
 			<td></td>
 		</tr>
-		<tr>
+		<tr id='2'>
 			<td>Three's</td>
 			<td></td>
 			<td></td>
 		</tr>
-		<tr>
+		<tr id='3'>
 			<td>Four's</td>
 			<td></td>
 			<td></td>
 		</tr>
-		<tr>
+		<tr id='4'>
 			<td>Five's</td>
 			<td></td>
 			<td></td>
 		</tr>
-		<tr>
+		<tr id='5'>
 			<td>Six's</td>
 			<td></td>
 			<td></td>
@@ -65,37 +65,37 @@
 			<td></td>
 			<td></td>
 		</tr>
-		<tr>
+		<tr id='7'>
 			<td>Three of a Kind</td>
-			<td>10</td>
-			<td>23</td>
+			<td></td>
+			<td></td>
 		</tr>
-		<tr>
+		<tr id='8'>
 			<td>Four of a Kind</td>
 			<td></td>
 			<td></td>
 		</tr>
-		<tr>
+		<tr id='9'>
 			<td>Full House</td>
 			<td></td>
 			<td></td>
 		</tr>
-		<tr>
+		<tr id='10'>
 			<td>Small Straight</td>
 			<td></td>
 			<td></td>
 		</tr>
-		<tr>
+		<tr id='11'>
 			<td>Large Straight</td>
 			<td></td>
 			<td></td>
 		</tr>
-		<tr>
+		<tr id='12'>
 			<td>Yahtzee</td>
 			<td></td>
 			<td></td>
 		</tr>
-		<tr>
+		<tr id='13'>
 			<td>Chance</td>
 			<td></td>
 			<td></td>

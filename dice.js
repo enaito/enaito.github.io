@@ -37,6 +37,7 @@ function displayScore(scores, pNum, clicked) {
 		$(this).removeClass("potential");
 		if ($(this).parent().hasClass("total")) {
 			$(this).html(sum);
+			$(this).addClass("permanent");
 		}
 		else {
 			sum += scores[i];

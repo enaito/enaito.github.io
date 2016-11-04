@@ -59,6 +59,7 @@ $(document).ready(function(){
 	dice = $.makeArray(dice);
 			console.log(dice);
 	var p1turn = true;
+	var diceShowing = false;
 	var numRolls = 0;
 	var potenScores = Array(15);
 	var p1Scores = Array(15).fill(0);
@@ -69,6 +70,7 @@ $(document).ready(function(){
 		if (numRolls < totalRolls) {
 			numRolls++;
 			rollDice(dice);
+			diceShowing = true;
 			dice.sort(function(a, b) {
 				return a.innerText - b.innerText;
 			});
@@ -92,19 +94,22 @@ $(document).ready(function(){
 	});
 
 	$("tr").click(function() {
-		// save score appropriately
-		var i = ($(this).attr('id'));
-		if (p1turn) {
-			p1Scores[i] = potenScores[i];
-			displayScore(p1Scores, 2, i);
+		if (diceShowing) {
+			// save score appropriately
+			var i = ($(this).attr('id'));
+			if (p1turn) {
+				p1Scores[i] = potenScores[i];
+				displayScore(p1Scores, 2, i);
+			}
+			else {
+				p2Scores[i] = potenScores[i];
+				displayScore(p2Scores, 3, i);
+			}
+			resetDice(dice);
+			diceShowing = false;
+			p1turn = changePlayer(p1turn);
+			numRolls = 0;
+			$("#roll").removeClass("disable");
 		}
-		else {
-			p2Scores[i] = potenScores[i];
-			displayScore(p2Scores, 3, i);
-		}
-		resetDice(dice);
-		p1turn = changePlayer(p1turn);
-		numRolls = 0;
-		$("#roll").removeClass("disable");
 	});
 });

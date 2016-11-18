@@ -31,11 +31,24 @@ function displayPotenScores(scores, pNum) {
 		}
 	});
 }
+
 function displayScore(scores, pNum, clicked) {
 	var sum = 0;
 	$("td:nth-child(" + pNum + ")").each(function(i) {
+		console.log(this);
 		$(this).removeClass("potential");
-		if ($(this).parent().hasClass("total")) {
+
+		// TODO: should ony do first if when greater than 63; 
+		// should add that to the total (aka should only do first or second, second or third, or just third)
+		// also should be able to have bonus as an ID, not as a class
+
+		if ($(this).parent().hasClass("bonus")) { //&& sum >= 63) {
+		 	$(this).html(35);
+		 	scores[i] = 35;
+		 	$(this).addClass("permanent");
+		}
+		else if ($(this).parent().hasClass("total")) {
+			scores[i] = sum;
 			$(this).html(sum);
 			$(this).addClass("permanent");
 		}
@@ -57,13 +70,12 @@ function displayScore(scores, pNum, clicked) {
 $(document).ready(function(){
 	var dice = document.getElementsByClassName('die');
 	dice = $.makeArray(dice);
-			console.log(dice);
 	var p1turn = true;
 	var diceShowing = false;
 	var numRolls = 0;
-	var potenScores = Array(15);
-	var p1Scores = Array(15).fill(0);
-	var p2Scores = Array(15).fill(0);
+	var potenScores = Array(16);
+	var p1Scores = Array(16).fill(0);
+	var p2Scores = Array(16).fill(0);
 
 
 	$("#roll").click(function() {
@@ -100,9 +112,11 @@ $(document).ready(function(){
 			if (p1turn) {
 				p1Scores[i] = potenScores[i];
 				displayScore(p1Scores, 2, i);
+				console.log(p1Scores);
 			}
 			else {
 				p2Scores[i] = potenScores[i];
+				console.log(p2Scores);
 				displayScore(p2Scores, 3, i);
 			}
 			resetDice(dice);

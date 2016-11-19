@@ -34,6 +34,7 @@ function displayPotenScores(scores, pNum) {
 
 function displayScore(scores, pNum, clicked) {
 	var sum = 0;
+	console.log("clicked is " + clicked);
 	$("td:nth-child(" + pNum + ")").each(function(i) {
 		console.log(this);
 		$(this).removeClass("potential");
@@ -42,7 +43,8 @@ function displayScore(scores, pNum, clicked) {
 		// should add that to the total (aka should only do first or second, second or third, or just third)
 		// also should be able to have bonus as an ID, not as a class
 
-		if ($(this).parent().hasClass("bonus")) { //&& sum >= 63) {
+		if ($(this).parent().hasClass("bonus") && sum >= 63) {
+			sum += 35;
 		 	$(this).html(35);
 		 	scores[i] = 35;
 		 	$(this).addClass("permanent");
@@ -53,6 +55,7 @@ function displayScore(scores, pNum, clicked) {
 			$(this).addClass("permanent");
 		}
 		else {
+			console.log("i is " + i);
 			sum += scores[i];
 			if (! $(this).hasClass('permanent')) {
 				if (i == clicked) {

@@ -1,3 +1,6 @@
+//TODO: don't be able to click on first row to switch players
+//TODO: weird bug when large straight, didn't show small straight score option
+
 function setScore(score, dice) {
 	var d = Array();
 	var sum = 0;

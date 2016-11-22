@@ -39,15 +39,15 @@ function displayScore(scores, pNum, clicked) {
 		console.log(this);
 		$(this).removeClass("potential");
 
-		// TODO: should ony do first if when greater than 63; 
-		// should add that to the total (aka should only do first or second, second or third, or just third)
-		// also should be able to have bonus as an ID, not as a class
+		// TODO: also should be able to have bonus as an ID, not as a class
 
-		if ($(this).parent().hasClass("bonus") && sum >= 63) {
-			sum += 35;
-		 	$(this).html(35);
-		 	scores[i] = 35;
-		 	$(this).addClass("permanent");
+		if ($(this).parent().hasClass("bonus")) {
+			if(sum >= 63) {
+				sum += 35;
+		 		$(this).html(35);
+		 		scores[i] = 35;
+		 		$(this).addClass("permanent");
+		 	}
 		}
 		else if ($(this).parent().hasClass("total")) {
 			scores[i] = sum;

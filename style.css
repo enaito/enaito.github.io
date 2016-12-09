@@ -63,6 +63,8 @@ h3 {
 	background: white;
 	border-radius: 10px;
 	text-align: center;
+	background-image: url(images/pips/nill.jpg);
+	background-size: 96px 96px;
 }
 
 .dieClicked {

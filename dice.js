@@ -1,9 +1,12 @@
 var totalRolls = 3;
 
 function rollDice(dice) {
-	$.each(dice, function() {
+	$.each(dice, function(i) {
 		if(! $(this).hasClass("dieClicked")) {
 			this.innerText = Math.ceil(Math.random() * 6);
+			console.log(this);
+			$('#b' + i).css('background-image', 'url(images/pips/' + this.innerText + '.jpg');
+			//this.background-image = 'images/pips/' + this.innerText + '.jpg'
 		}
 	})
 }
@@ -38,9 +41,6 @@ function displayScore(scores, pNum, clicked) {
 	$("td:nth-child(" + pNum + ")").each(function(i) {
 		console.log(this);
 		$(this).removeClass("potential");
-
-		// TODO: also should be able to have bonus as an ID, not as a class
-
 		if ($(this).parent().hasClass("bonus")) {
 			if(sum >= 63) {
 				sum += 35;

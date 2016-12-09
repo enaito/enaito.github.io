@@ -29,7 +29,7 @@ function setScore(score, dice) {
 			score[10] = 25;
 		}
 	}
-
+	
 	else if (d[0] + 1 == d[1]) {
 		if (d[1] + 1 == d[2]) {
 			if (d[2] + 1 == d[3]) {
@@ -55,10 +55,10 @@ function setScore(score, dice) {
 			}
 		}
 	}
-	else if (d[0] == d[1] && d[1] + 1 == d[2]) {
+	else if (d[1] + 1 == d[2]) {
 		if (d[2] + 1 == d[3]) {
 			if (d[3] + 1 == d[4]) {
-				score[11] = 30;		// 1 1 2 3 4
+				score[11] = 30;		// 1 1 2 3 4 OR 1 3 4 5 6
 			}
 		}
 	}

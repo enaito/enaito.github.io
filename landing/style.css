@@ -1,0 +1,35 @@
+body {
+	background-image: url('orange.png');
+	font-family: 'Muli', sans-serif;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: center;
+}
+
+.button {
+	vertical-align: middle;
+	margin-top: 10px;
+	margin-right: 5px;
+	background-color: #c7a4ff;
+	font-size: 200%;
+	width: 30%;
+	height: 150px;
+	border-radius: 10px 10px;
+}
+
+.button:hover:not(#forecast_embed) {
+	background-color: #a871ff;
+	cursor: pointer;
+}
+
+a.link:link {
+	color: black;
+	text-decoration: none;
+}
+
+.weather {
+	width: 70%;
+	height: 245px;
+}
+/*light purple c7a4ff 
+  light orange ffb347*/

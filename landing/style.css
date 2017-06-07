@@ -1,35 +1,46 @@
 body {
 	background-image: url('orange.png');
-	font-family: 'Muli', sans-serif;
+	font-family: 'Museo', 'Avenir', sans-serif;
 	margin-left: 5%;
 	margin-right: 5%;
 	text-align: center;
 }
 
+h1 {
+	font-size: 275%;
+}
+
 .button {
+	font-family: 'Museo', 'Avenir', sans-serif;
 	vertical-align: middle;
-	margin-top: 10px;
-	margin-right: 5px;
+	margin-bottom: 2%;
+	margin-left: 1%;
+	margin-right: 1%;
 	background-color: #c7a4ff;
 	font-size: 200%;
 	width: 30%;
-	height: 150px;
+	height: 200px;
 	border-radius: 10px 10px;
 }
 
-.button:hover:not(#forecast_embed) {
+.button:hover:not(.noClick) {
 	background-color: #a871ff;
 	cursor: pointer;
 }
 
-a.link:link {
-	color: black;
-	text-decoration: none;
+.wide {
+	width: 95%;
+	height: 100px;
 }
 
 .weather {
-	width: 70%;
 	height: 245px;
 }
-/*light purple c7a4ff 
-  light orange ffb347*/
+
+#header {
+	font-size: 100%;
+}
+
+#content {
+	font-size: 50%;
+}

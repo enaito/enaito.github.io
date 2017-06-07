@@ -3,37 +3,44 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Explo Home</title>
+	<title>Explo Landing Page</title>
 	<link href="style.css" rel="stylesheet" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="clicks.js"></script>
 </head>
 
 <body>
-	<h1>Explo: Links</h1>
-		<button class="button" id="tripDesc">
-			Trip Descriptions
-		</button> 
-		<button class="button" id="announce">
-			Morning Annoucements</a>
-		</button>
-		<button class="button" id="atlas">
-			Daily Atlas
+	<h1>Explo at Wellesley</h1>
+		<button class="wide button" id="announcements">
+			Explo Update
 		</button>
 		<br>
 
-		<button class="button" id="tripForm">
-			Trip Sign Ups</a>
+		<button class="button" id="tripSignUps">
+			Trip Sign Ups
+		</button> 
+		<button class="button" id="atlas">
+			Today's Atlas
 		</button>
 		<button class="button" id="badgeForm">
-			Badge Nomination Form</a>
-		</button>
-		<button class="button" id="mainEvDesc">
-			Main Event Descriptions</a>
+			Badge Nomination Form
 		</button>
 		<br>
 
-		<iframe class="weather button" id="forecast_embed" type="text/html" frameborder="0" src="http://forecast.io/embed/#lat=42.292857&lon=-71.308674&name=Wellesley"></iframe>
+		<button class="button" id="tripDescriptions">
+			Trip Descriptions
+		</button>
+		
+		<button class="button" id="mainEventDescriptions">
+			Main Event Descriptions
+		</button>
+		<button class="noClick button" id="text">
+			<div id="header"></div>
+			<div id="content"></div>
+		</button>
+		<br>
+
+		<iframe class="noClick weather wide button" id="forecast_embed" type="text/html" frameborder="0" src="http://forecast.io/embed/#lat=42.292857&lon=-71.308674&name=Wellesley"></iframe>
 
 </body>
 
